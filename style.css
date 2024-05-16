@@ -9,6 +9,7 @@ body{
     color:white;
 }
 
+/* header included grid template for profilepic description and storyline */
 header{
     height:50vw;
     display: grid;
@@ -20,6 +21,7 @@ header{
     padding:10px;
 }
 
+/* profilepic-container */
 header>div{
     grid-area: pic;
     display: flex;
@@ -27,6 +29,7 @@ header>div{
     align-items: center;
 }
 
+/* round profilepic-container for gradient circle */
 header>div>div{
     display:flex;
     align-items: center;
@@ -38,6 +41,7 @@ header>div>div{
     border-radius: 50%;
 }
 
+/* profilepic */
 header>div>div>img{
     width:92%;
     height:92%;
@@ -45,16 +49,85 @@ header>div>div>img{
     border:5px solid black;
 }
 
+/* description-container */
 header>section:first-of-type{
     grid-area: sec;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
+/* first line with username and buttons */
+header>section:first-of-type>article:first-of-type{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* username */
+h1{
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0 40px 5px 0;
+}
+
+/* icon within username */
+h1>i{
+    color:rgb(0, 140, 255);
+    font-size: 1.2rem;
+}
+
+/* all buttons */
+header>section:first-of-type>article>div>button{
+    font-size: 0.8rem;
+    height:30px;
+    border: none;
+    color:white;
+    font-weight: 700;
+    border-radius:5px;
+    margin-right: 5px;
+}
+
+/* first button */
+header>section:first-of-type>article>div>button:first-of-type{
+    background-color:rgb(0, 140, 255);
+    width:70px;
+}
+
+/* second button */
+header>section:first-of-type>article>div>button:nth-of-type(2){
+    background-color:grey;
+    width:100px;
+}
+
+/* third button */
+header>section:first-of-type>article>div>button:last-of-type{
+    background-color:grey;
+    width:30px;
+}
+
+/* storyline */
 header>section:last-of-type{
     grid-area: story;
     display: flex;
     flex-direction: row;
-    border: 2px solid blue;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header>section:last-of-type>article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+header>section:last-of-type>article>img{
+    border-radius: 50%;
+    width:80%;
+}
+
+header>section:last-of-type>article>h2{
 }
