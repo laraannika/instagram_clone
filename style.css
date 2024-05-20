@@ -7,11 +7,16 @@
 body{
     background-color: #000000;
     color:white;
+    overflow-x: hidden;
+}
+
+header, main{
+    width:85vw;
+    margin-left:15vw;
 }
 
 /* header included grid template for profilepic description and storyline */
 header{
-    /* height:50vw; */
     display: grid;
     grid-template: 2fr 1fr / 1fr 2fr;
     grid-template-areas: 
@@ -109,6 +114,13 @@ header>section:first-of-type>article>div>button:last-of-type{
     width:30px;
 }
 
+header>section:first-of-type>article>div>button:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 15px blue, inset 0 0 15px blue;
+    cursor: pointer;
+}
+
 /* description second line paragraph */
 header>section:first-of-type>article:nth-of-type(2)>p{
     margin-right: 10vw;
@@ -125,6 +137,7 @@ header>section:first-of-type>article:last-of-type{
     flex-direction: column;
     gap:5px;
     margin-top: 20px;
+    margin-right:5px;
 }
 
 h2{
@@ -147,9 +160,10 @@ header>section:last-of-type{
     grid-area: story;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     margin-bottom:20px;
+    margin-right: 20px;
 }
 
 header>section:last-of-type>article{
@@ -163,20 +177,29 @@ header>section:last-of-type>article{
 
 header>section:last-of-type>article>img{
     border-radius: 50%;
-    width:80%;
+    width:70%;
+}
+
+header>section:last-of-type>article>img:hover{
+    filter: brightness(0.8);
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 10px pink;
 }
 
 
 /* HEADER FINISHED !!! */
 
 
+/* nav list, row, icon and text */
 ul{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     gap:10px;
-    padding:20px 0;
+    padding: 20px 0;
+    margin: 0 10vw;
     border-top:1px solid grey;
     list-style: none;
 }
@@ -189,16 +212,24 @@ li>a>p{
     display:inline-block;
 }
 
+li>a:hover{
+    color:pink;
+    text-shadow: 0 0 5px pink;
+}
+
 a>i{
     padding-right:1rem;
 }
 
+/* layout for pics */
 .grid{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap:3px;
+    padding: 0 10vw;
 }
 
+/* pic-containers, pics as bg */
 .grid>div{
     aspect-ratio: 1/1;
     background-size: cover;
@@ -209,10 +240,12 @@ a>i{
     flex-wrap: wrap;
 }
 
+/* icons in pics */
 .grid>div>i{
     display:none;
 }
 
+/* icons in pics, there by hover */
 .grid>div:hover>i{
     display:block;
     font-size: 1.5rem;
@@ -220,10 +253,13 @@ a>i{
     padding: 10px;
 }
 
+/* bg image gets darker by hover */
 .grid>div:hover{
     filter:brightness(0.8);
+    cursor: pointer;
 }
 
+/* icons itself get colors by hover */
 .grid>div>i:first-of-type:hover{
     color:red;
     text-shadow: 0 0 10px red;
@@ -234,6 +270,7 @@ a>i{
     text-shadow: 0 0 10px blue;
 }
 
+/* bg ppics of containers */
 .grid>div:first-of-type{
     background-image: url(./images/Pic_1.jpg);
 }
@@ -286,6 +323,49 @@ a>i{
     background-image: url(./images/Pic_13.jpg);
 }
 
+footer{
+    position: fixed;
+    left:0;
+    top: 0;
+    bottom: 0;
+    /* height:100vh; */
+    width:15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-right: 1px solid grey;
+}
+
+footer>div>div, footer>div:first-of-type{
+    display: flex;
+    flex-direction: row;
+}
+
+footer h3{
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+    margin-left: 1.5rem;
+}
+footer i, footer p{
+    font-size: 1.6rem;
+    align-content: center;
+    padding-left: 1.5rem;
+}
+
+footer>div:first-of-type>i{
+    display: none;
+}
+
+footer>div>div i, footer>div>div p{
+    padding-top:1.7rem;
+}
+
+footer>div:first-of-type:hover,
+footer>div div:hover{
+    color:pink;
+    text-shadow: 0 0 5px pink;
+    cursor: pointer;
+}
 
 
 /* MEDIA QUERY FOR DISPLAY UNDER 600px */
@@ -305,5 +385,66 @@ a>i{
 
     li>a>i{
         font-size: 1.5rem;
+    }
+
+    header, main{
+        width:100vw;
+        margin-left: 0;
+    }
+
+    footer{
+        position: sticky;
+        top: unset;
+        right:0;
+        height:5vh;
+        width:100vw;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+        border:none;
+    }
+
+    footer *{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer>div:first-of-type,
+    footer>div:nth-of-type(2)>div:nth-of-type(2),
+    footer>div:nth-of-type(2)>div:nth-of-type(6),
+    footer>div:last-of-type{
+        display:none;
+    }
+
+    footer>div:nth-of-type(2)>div:nth-of-type(5){
+        order: 2;
+    }
+
+    footer>div:nth-of-type(2){
+        gap:10vw;
+        background-color: black;
+        padding-bottom: 30px;
+        padding-right: 70px;
+        border-top: 1px solid grey;
+    }
+}
+
+@media (max-width: 1400px){
+
+    footer{
+        width:70px;
+        align-items: flex-start;
+    }
+    footer p, footer h3{
+        display:none;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer> div>i:first-of-type{
+        display:block;
     }
 }
