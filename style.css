@@ -401,6 +401,14 @@ footer>div div:hover{
         margin-left: 0;
     }
 
+    .grid{
+        padding: 0;
+    }
+
+    ul{
+        margin: 0;
+    }
+
     footer{
         position: sticky;
         top: unset;
