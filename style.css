@@ -54,6 +54,13 @@ header>div>div>img{
     border:5px solid black;
 }
 
+header>div>div:hover{
+    filter: brightness(0.8);
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 2s;
+}
+
 /* description-container */
 header>section:first-of-type{
     grid-area: sec;
@@ -178,6 +185,7 @@ header>section:last-of-type>article{
 header>section:last-of-type>article>img{
     border-radius: 50%;
     width:70%;
+    transition: 1s;
 }
 
 header>section:last-of-type>article>img:hover{
@@ -185,6 +193,7 @@ header>section:last-of-type>article>img:hover{
     transform: scale(1.1);
     cursor: pointer;
     box-shadow: 0 0 10px pink;
+    transition: 1s;
 }
 
 
@@ -323,12 +332,12 @@ a>i{
     background-image: url(./images/Pic_13.jpg);
 }
 
+/* footer left */
 footer{
     position: fixed;
     left:0;
     top: 0;
     bottom: 0;
-    /* height:100vh; */
     width:15vw;
     display: flex;
     flex-direction: column;
@@ -427,7 +436,8 @@ footer>div div:hover{
         gap:10vw;
         background-color: black;
         padding-bottom: 30px;
-        padding-right: 70px;
+        padding-right: 90px;
+        padding-left: 10px;
         border-top: 1px solid grey;
     }
 }
