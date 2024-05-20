@@ -11,8 +11,9 @@ body{
 }
 
 header, main{
-    width:85vw;
-    margin-left:15vw;
+    width:75vw;
+    margin-left:20vw;
+    margin-right:5vw;
 }
 
 /* header included grid template for profilepic description and storyline */
@@ -208,7 +209,7 @@ ul{
     align-items: center;
     gap:10px;
     padding: 20px 0;
-    margin: 0 10vw;
+    /* margin: 0 10vw; */
     border-top:1px solid grey;
     list-style: none;
 }
@@ -235,7 +236,7 @@ a>i{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap:3px;
-    padding: 0 10vw;
+    /* padding: 0 10vw; */
 }
 
 /* pic-containers, pics as bg */
