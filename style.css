@@ -377,6 +377,22 @@ footer>div div:hover{
     cursor: pointer;
 }
 
+@media (max-width: 1400px){
+
+    footer{
+        width:70px;
+        align-items: flex-start;
+    }
+    footer p, footer h3{
+        display:none;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer> div>i:first-of-type{
+        display:block;
+    }
+}
 
 /* MEDIA QUERY FOR DISPLAY UNDER 600px */
 @media (max-width: 600px){
@@ -404,6 +420,7 @@ footer>div div:hover{
 
     .grid{
         padding: 0;
+        padding-bottom: calc(5vh + 30px);
     }
 
     ul{
@@ -411,9 +428,8 @@ footer>div div:hover{
     }
 
     footer{
-        position: sticky;
+        position: fixed;
         top: unset;
-        right:0;
         height:5vh;
         width:100vw;
         flex-direction: row;
@@ -421,6 +437,8 @@ footer>div div:hover{
         align-items: center;
         padding-bottom: 30px;
         border:none;
+        background-color: black;
+        border-top: 1px solid grey;
     }
 
     footer *{
@@ -443,27 +461,5 @@ footer>div div:hover{
 
     footer>div:nth-of-type(2){
         gap:10vw;
-        background-color: black;
-        padding-bottom: 30px;
-        padding-right: 90px;
-        padding-left: 10px;
-        border-top: 1px solid grey;
-    }
-}
-
-@media (max-width: 1400px){
-
-    footer{
-        width:70px;
-        align-items: flex-start;
-    }
-    footer p, footer h3{
-        display:none;
-        padding: 0;
-        margin: 0;
-    }
-
-    footer> div>i:first-of-type{
-        display:block;
     }
 }
